@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ "profesor" | translate }}
+      {{ "bienvenido" | translate }}
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="select">
+    <ion-label>{{ "selecciona" | translate }}</ion-label>
+    <ion-select cancelText="Cancel" [(ngModel)]="idioma" placeholder="Selecciona" (ionChange)="changeLang($event)">
+      <ion-select-option *ngFor="let lang of langs">{{ lang }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-list>
+    <ion-item [routerLink]="['/profesor/profesor-detalle']">
+      <ion-label>{{ "perfil" | translate }}</ion-label>
+    </ion-item>
+    <ion-item  [routerLink]="['/profesor']">
+      <ion-label >{{ "curso" | translate }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label [routerLink]="['/qr']">{{ "generar qr" | translate }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label [routerLink]="['/mapa']">{{ "mapa" | translate }}</ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ "generar qr" | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+  
+    <ngx-qrcode [elementType]="elementType" [value]="qrData" ></ngx-qrcode>
+    <ion-input type="text" [(ngmodel)]="qrData"></ion-input>
+    
+  </ion-card>
+
+</ion-content>

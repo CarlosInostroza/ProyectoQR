@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ "login" | translate }}
+      {{ "bienvenido" | translate }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="select">
+    <ion-label>{{ "selecciona" | translate }}</ion-label>
+    <ion-select cancelText="Cancel" [(ngModel)]="idioma" placeholder="Selecciona" (ionChange)="changeLang($event)">
+      <ion-select-option *ngFor="let lang of langs">{{ lang }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-card>
+    <ion-card-content>
+
+    <ion-item>
+      <ion-label>{{ "correo" | translate }}:</ion-label>
+      <ion-input type="text" #txtEmail></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>{{ "contraseña" | translate }}:</ion-label>
+      <ion-input type="password" #txtPass></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="usuario">
+      <ion-label>{{ "perfil" | translate }}:</ion-label>
+      <ion-input type="text" [(ngModel)]="usuario.tipo"></ion-input>
+    </ion-item>
+
+
+    <ion-button (click)="login(txtEmail,txtPass)">{{ "login" | translate }}</ion-button>
+    <ion-button (click)="registrar(txtEmail,txtPass)">{{ "registrarse" | translate }}</ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

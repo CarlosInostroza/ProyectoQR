@@ -1,0 +1,17 @@
+{
+    "bienvenido" : "Welcome",
+    "selecciona" : "Select",    
+    "perfil" : "Profile",
+    "curso" : "Grade",
+    "escaner" : "Scan",
+    "mapa" : "Map",
+    "generar qr" : "Generate QR",
+    "correo" : "Email",
+    "contraseña" : "Password",
+    "login" : "Login",
+    "registrarse" : "Sing In",
+    "alumno detalle" : "Student Detail",
+    "profesor" : "Teacher",
+    "alumnos" : "Students",
+    "escanear qr" : "Scan QR"
+}
